@@ -9,7 +9,7 @@ SECRET_KEY = '1_n3ckfyn%!sglhlb@vy6d!%81p_9(*1c#cmzl!&b2k5c+l*3$'
 
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://masterbdx-portfolio.herokuapp.com/']
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'assassinbd9@gmail.com' 
