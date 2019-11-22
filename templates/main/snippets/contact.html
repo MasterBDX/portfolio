@@ -4,9 +4,10 @@
 
       <!-- Contact Section Heading -->
       <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-
+      
       <!-- Icon Divider -->
       <div class="divider-custom">
+       
         <div class="divider-custom-line"></div>
         <div class="divider-custom-icon">
           <i class="fas fa-star"></i>
@@ -17,7 +18,13 @@
       <!-- Contact Section Form -->
       <div class="row">
         <div class="col-lg-8 mx-auto">
-
+           {% if messages %}
+          <div class="messages">
+                {% for message in messages %}
+            <span{% if message.tags %} class="alert alert-success {{ message.tags }}"{% endif %}>{{ message }}</span>
+            {% endfor %}
+          </div>
+      {% endif %}
           <form  method="post">
             {% csrf_token %}
              {% for field in form %}

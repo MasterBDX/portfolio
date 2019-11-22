@@ -24,13 +24,7 @@ def home_view(request):
 			context = {'name':subject,'message':message,'phone':phone_num}
 			txt_ = get_template('main/snippets/message.txt').render(context)
 			html_ = get_template('main/snippets/html_message.html').render(context)
-			# sent_mail = send_mail(subject,
-			# 					  txt_message,
-			# 					  from_email,
-			# 					  ['masterbdxteam@gmail.com'],
-			# 					  html_message=html_message,
-			# 					  fail_silently=False 
-			# 					  )
+			
 			send_mail(
                         subject,
                         txt_,
@@ -39,6 +33,7 @@ def home_view(request):
                         html_message=html_,
                         fail_silently=False 
                                  )
+			messages.add_message(request,messages.SUCCESS,'your message has been sent')
 			return redirect('/')
 	context = {'projects':projects,'form':form}
 	return render(request,'main/home.html',context)
