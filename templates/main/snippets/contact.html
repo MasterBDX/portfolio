@@ -1,0 +1,40 @@
+<!-- Contact Section -->
+  <section class="page-section" id="contact">
+    <div class="container">
+
+      <!-- Contact Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Contact Section Form -->
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+          <form name="sentMessage" id="contactForm" novalidate="novalidate">
+             {% for field in form %}
+             <br>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                      {{field }}      
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            {% endfor %}        
+            <div class="form-group">
+              <br><br>
+              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>

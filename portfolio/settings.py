@@ -9,7 +9,16 @@ SECRET_KEY = '1_n3ckfyn%!sglhlb@vy6d!%81p_9(*1c#cmzl!&b2k5c+l*3$'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://masterbdx-portfolio.herokuapp.com/']
+ALLOWED_HOSTS = ['https://masterbdx-portfolio.herokuapp.com']
+
+
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_HOST_USER = 'apikey'
+# EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+
+
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'assassinbd9@gmail.com' 
@@ -33,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # my apps
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +133,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 django_heroku.settings(locals())
 
-# try:
-#     from .local_settings import *
-# except:
-#     pass
+
+
+try:
+    from .local_settings import *
+except:
+    pass
