@@ -34,6 +34,6 @@ def home_view(request):
                         fail_silently=False 
                                  )
 			messages.add_message(request,messages.SUCCESS,'your message has been sent')
-			return redirect('/')
+			return redirect('/#contact')
 	context = {'projects':projects,'form':form}
 	return render(request,'main/home.html',context)

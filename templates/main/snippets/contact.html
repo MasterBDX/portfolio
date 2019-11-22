@@ -19,12 +19,27 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
            {% if messages %}
-          <div class="messages">
-                {% for message in messages %}
-            <span{% if message.tags %} class="alert alert-success {{ message.tags }}"{% endif %}>{{ message }}</span>
-            {% endfor %}
-          </div>
+      {% for message in messages %}
+      <div class="
+              {% if message.tags %} 
+                {{ message.tags }}
+              {% endif %}
+              
+                alert alert-success
+              
+
+               alert-dismissible fade show messages
+              " role="alert">
+
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+          {% endfor %}
+      
       {% endif %}
+
           <form  method="post">
             {% csrf_token %}
              {% for field in form %}
