@@ -136,6 +136,7 @@ django_heroku.settings(locals())
 
 
 try:
+    
     from .local_settings import *
 except:
     pass
