@@ -20,13 +20,13 @@ ALLOWED_HOSTS = ['https://masterbdx-portfolio.herokuapp.com']
 
 
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'assassinbd9@gmail.com' 
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'assassinbd9@gmail.com' 
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
 
-DEFAULT_FROM_EMAIL = '<assassinbd9@gmail.com>'
+# DEFAULT_FROM_EMAIL = '<assassinbd9@gmail.com>'
 
 
 
