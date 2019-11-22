@@ -128,6 +128,11 @@ STATICFILES_DIRS = (
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_OAUTH2_TOKEN =  os.environ.get('DROPBOX_OAUTH2_TOKEN')
+DROPBOX_ROOT_PATH = os.environ.get('DROPBOX_ROOT_PATH')
+
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
