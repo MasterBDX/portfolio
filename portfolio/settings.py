@@ -26,11 +26,11 @@ EMAIL_USE_TLS = True
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
 
-# DEFAULT_FROM_EMAIL = '<assassinbd9@gmail.com>'
+DEFAULT_FROM_EMAIL = '<masterbdxteam@gmail.com>'
 
 
 
-MANAGERS = (('masterbdx','assassinbd9@gmail.com'),)
+MANAGERS = (('masterbdx','masterbdxteam@gmail.com'),)
 
 ADMINS = MANAGERS
 

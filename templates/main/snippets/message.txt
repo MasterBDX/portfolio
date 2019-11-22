@@ -1,0 +1,11 @@
+{% autoescape off %}
+
+Name : {{name}} 
+ <br>
+ <br>
+Phone Number : {{phone}}
+<br>
+<br>
+Message : {{message}}
+
+{% endautoescape %}
