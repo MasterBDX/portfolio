@@ -4,7 +4,7 @@ import django_heroku
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-SECRET_KEY = '1_n3ckfyn%!sglhlb@vy6d!%81p_9(*1c#cmzl!&b2k5c+l*3$'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 DEBUG = False
@@ -19,18 +19,11 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 
-
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'assassinbd9@gmail.com' 
-# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-
-DEFAULT_FROM_EMAIL = '<masterbdxteam@gmail.com>'
+DEFAULT_FROM_EMAIL =  os.environ.get('DEFAULT_FROM_EMAIL')
 
 
 
-MANAGERS = (('masterbdx','masterbdxteam@gmail.com'),)
+MANAGERS = os.environ.get('MANAGERS')
 
 ADMINS = MANAGERS
 
