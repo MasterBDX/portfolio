@@ -56,21 +56,21 @@
                         <!-- Portfolio Modal - Image -->
                         <img class="img-fluid rounded mb-5" src="{{project.img.url}}" alt="">
                         <!-- Portfolio Modal - Text -->
-                        <p class="mb-5">
+                        <p class="mb-5" style="font-size: 1.5em;">
                             {{project.description}}
                         </p>
-                        <button class="btn btn-primary" href="#" data-dismiss="modal">
+                        <button class="btn btn-primary mr-1" href="#" data-dismiss="modal">
                           <i class="fas fa-times fa-fw"></i>
-                          Close Window
+                          Close
                         </button>
                         {% if project.github %}
-                            <a class="btn btn-dark" href="{{project.github}}">
+                            <a class="btn btn-dark mr-1" href="{{project.github}}">
                               <i class="fab fa-github fa-fw"></i>
                               Github
                             </a>
                         {% endif %}
                         {% if project.live %}
-                            <a type="" class="btn btn-danger" href="{{project.live}}">
+                            <a type="" class="btn btn-danger mr-1" href="{{project.live}}">
                               <i class="far fa-window-maximize fa-fw"></i>
                               Live Preview
                             </a>
