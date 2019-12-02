@@ -57,7 +57,7 @@
                         <img class="img-fluid rounded mb-5" src="{{project.img.url}}" alt="">
                         <!-- Portfolio Modal - Text -->
                         <p class="mb-5" style="font-size: 1.5em;">
-                            {{project.description}}
+                            {{project.description|safe}}
                         </p>
                         <button class="btn btn-primary mr-1" href="#" data-dismiss="modal">
                           <i class="fas fa-times fa-fw"></i>
