@@ -1,24 +1,39 @@
 {% load static %}
 <header class="masthead bg-primary text-white text-center">
-    <div class="container d-flex align-items-center flex-column">
+  <div class="container d-flex align-items-center flex-column">
 
-      <!-- Masthead Avatar Image -->
-      <img class=" rounded-circle masthead-avatar mb-5" src="{% static 'img/omarbd.png' %}" alt="">
+    <!-- Masthead Avatar Image -->
+    <img class=" rounded-circle masthead-avatar mb-5" src="{% static 'img/omarbd.png' %}" alt="">
 
-      <!-- Masthead Heading -->
-      <h1 class="masthead-heading text-uppercase mb-0">Omar Balied (MasterBDX)</h1>
+    <!-- Masthead Heading -->
+    <h1 class="masthead-heading text-uppercase mb-0">Omar Balied (MasterBDX)</h1>
 
-      <!-- Icon Divider -->
-      <div class="divider-custom divider-light">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="divider-custom-line"></div>
+    <!-- Icon Divider -->
+    <div class="divider-custom divider-light">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon">
+        <i class="fas fa-star"></i>
       </div>
-
-      <!-- Masthead Subheading -->
-      <p class="masthead-subheading font-weight-light mb-0">Web Developer <br> Python | Django | RestApi <br> JavaScipt | JQuery | React  </p>
-
+      <div class="divider-custom-line"></div>
     </div>
-  </header>
+
+    <!-- Masthead Subheading -->
+    <p class="masthead-subheading font-weight-light mb-0">
+      Web Developer <br>
+      {% for skill in skills %}
+      {{forloop.couter}}
+
+
+      {% cycle '' '' '' '<br>' '' '' '' '<br/>' '' '' '' '<br>' '' '' '' '<br>' %}
+
+      {{skill.title}}
+
+      {% if not forloop.counter == skills.count and not forloop.counter == 3  %}
+      |
+      {% endif %}
+
+      {% endfor %}
+    </p>
+
+  </div>
+</header>
