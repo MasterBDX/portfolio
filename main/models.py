@@ -22,3 +22,9 @@ class Skill(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class AboutMe(models.Model):
+    description = models.TextField(blank=True, null=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)

@@ -7,12 +7,16 @@ from django.conf import settings
 
 
 from .forms import Contact
-from .models import Project, Skill
+from .models import Project, Skill, AboutMe
 
 
 def home_view(request):
     skills = Skill.objects.all()
     projects = Project.objects.all()
+    qs = AboutMe.objects.all()
+    about_me = None
+    if qs.exists():
+        about_me = qs.first()
     form = Contact()
     if request.method == 'POST':
         form = Contact(request.POST)
@@ -38,5 +42,10 @@ def home_view(request):
             messages.add_message(request, messages.SUCCESS,
                                  'your message has been sent')
             return redirect('/#contact')
-    context = {'projects': projects, 'form': form, 'skills': skills}
+    context = {'projects': projects,
+               'form': form,
+               'skills': skills,
+               'about_me': about_me.description
+               }
+
     return render(request, 'main/home.html', context)
