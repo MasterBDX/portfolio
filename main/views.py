@@ -16,7 +16,8 @@ def home_view(request):
     qs = AboutMe.objects.all()
     about_me = None
     if qs.exists():
-        about_me = qs.first()
+        about_me = qs.first().description
+
     form = Contact()
     if request.method == 'POST':
         form = Contact(request.POST)
@@ -45,7 +46,7 @@ def home_view(request):
     context = {'projects': projects,
                'form': form,
                'skills': skills,
-               'about_me': about_me.description
+               'about_me': about_me
                }
 
     return render(request, 'main/home.html', context)
