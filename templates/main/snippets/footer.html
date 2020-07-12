@@ -6,8 +6,17 @@
         <!-- Footer Location -->
         <div class="col-lg-4 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">Location</h4>
-          <p class="lead mb-0">Aljufra Houn
-            <br>500 Street</p>
+          <p class="lead mb-0 location">
+            {% if about_me.country %}
+            Country : {{about_me.country}}
+            <br>
+            {% endif %}
+            {% if about_me.city %}
+            City : {{about_me.city}}
+            <br>
+            {% endif %}
+           
+          </p>
         </div>
 
         <!-- Footer Social Icons -->
@@ -28,15 +37,20 @@
              href="https://github.com/MasterBDX">
             <i class="fab fa-fw fa-github"></i>
           </a>
+          <br />
+          <br />
+          <p class="phoneNumber">Phone Number : {{about_me.phone_number}}</p>
         </div>
 
         <!-- Footer About Text -->
         <div class="col-lg-4">
-          <h4 class="text-uppercase mb-4">Omar Baleid (MasterBDX)</h4>
-          <p class="lead mb-0">
-            I’m a full-stack web developer. I can help you solve a problem, build a product or grow existing project 
-            
-           </p>
+          <h4 class="text-uppercase mb-4">
+            Omar Baleid (MasterBDX)</h4>
+            {% if about_me %}
+          <p class="lead mb-0 overview">
+            {{about_me.overview}}
+          </p>
+           {% endif %}
         </div>
 
       </div>

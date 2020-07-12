@@ -1,3 +1,4 @@
+{% if about_me %}
 <section class="page-section bg-primary text-white mb-0" id="about">
   <div class="container">
 
@@ -19,7 +20,11 @@
       </div>
       <div class="col-md-8 text-center">
         <p class="lead" style="font-size: 1.5em;">
-          {{about_me}}
+        
+        
+         {{about_me.description}}
+    
+        
         </p>
       </div>
       <div class="col-md-2">
@@ -27,3 +32,4 @@
     </div>
   </div>
 </section>
+{% endif %}

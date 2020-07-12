@@ -16,7 +16,7 @@ def home_view(request):
     qs = AboutMe.objects.all()
     about_me = None
     if qs.exists():
-        about_me = qs.first().description
+        about_me = qs.first()
 
     form = Contact()
     if request.method == 'POST':

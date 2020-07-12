@@ -17,23 +17,7 @@
       <div class="divider-custom-line"></div>
     </div>
 
-    <!-- Masthead Subheading -->
-    <p class="masthead-subheading font-weight-light mb-0">
-      Web Developer <br>
-      {% for skill in skills %}
-      {{forloop.couter}}
-
-
-      {% cycle '' '' '' '<br>' '' '' '' '<br/>' '' '' '' '<br>' '' '' '' '<br>' %}
-
-      {{skill.title}}
-
-      {% if not forloop.counter == skills.count %}
-      |
-      {% endif %}
-
-      {% endfor %}
-    </p>
+  
 
   </div>
 </header>
