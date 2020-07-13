@@ -4,17 +4,28 @@
       <div class="row">
 
         <!-- Footer Location -->
-        {% if location %}
         <div class="col-lg-4 mb-5 mb-lg-0">
+          {% if location %}
           <h4 class="text-uppercase mb-4">Location</h4>
           <p class="lead mb-0 location">
-            Country : {{about_me.country}}
+            Country &nbsp;:&nbsp;{{location.country.name}}
+            <span>
+            <img src="{{location.country.flag}}" />
+            </span>
             <br>
-            City : {{about_me.city}}
+            {% if about_me.province %}
+            Province &nbsp;:&nbsp; {{location.province}}
+            <br>
+            {% endif %}
+            {% if location.township %}
+            Township &nbsp;:&nbsp; {{location.township}}
+            <br>
+            {% endif %}
+            City &nbsp;:&nbsp; {{location.city}}
             <br>
           </p>
+          {% endif %}
         </div>
-        {% endif %}
 
         <!-- Footer Social Icons -->
         <div class="col-lg-4 mb-5 mb-lg-0">

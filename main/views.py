@@ -7,16 +7,14 @@ from django.conf import settings
 
 
 from .forms import Contact
-from .models import Project, Skill, AboutMe
+from .models import Project, Skill, AboutMe,Location
 
 
 def home_view(request):
     skills = Skill.objects.all()
     projects = Project.objects.all()
-    qs = AboutMe.objects.all()
-    about_me = None
-    if qs.exists():
-        about_me = qs.first()
+    about_me = AboutMe.objects.all().first()
+    location = Location.objects.all().first()
 
     form = Contact()
     if request.method == 'POST':
@@ -46,7 +44,8 @@ def home_view(request):
     context = {'projects': projects,
                'form': form,
                'skills': skills,
-               'about_me': about_me
+               'about_me': about_me,
+               'location':location
                }
 
     return render(request, 'main/home.html', context)

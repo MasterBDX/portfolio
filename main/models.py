@@ -1,5 +1,5 @@
 from django.db import models
-
+from django_countries.fields import CountryField
 
 class Project(models.Model):
     title = models.CharField(max_length=255)
@@ -38,9 +38,16 @@ class AboutMe(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
 
-class Location(models.Model):
-    country = models.CharField(max_length=255)
-    
-    city = models.CharField(max_length=255,
-                            blank=True,null=True)
 
+class Location(models.Model):
+    country = CountryField(default='LY')
+    city = models.CharField(max_length=255)
+    province = models.CharField(max_length=255,null=True,
+                                            blank=True)
+    province = models.CharField(max_length=255,null=True,
+                                            blank=True)
+    township = models.CharField(max_length=255,null=True,
+                                            blank=True)
+
+    def __str__(self):
+        return self.country.name
