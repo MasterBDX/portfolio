@@ -4,20 +4,17 @@
       <div class="row">
 
         <!-- Footer Location -->
+        {% if location %}
         <div class="col-lg-4 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">Location</h4>
           <p class="lead mb-0 location">
-            {% if about_me.country %}
             Country : {{about_me.country}}
             <br>
-            {% endif %}
-            {% if about_me.city %}
             City : {{about_me.city}}
             <br>
-            {% endif %}
-           
           </p>
         </div>
+        {% endif %}
 
         <!-- Footer Social Icons -->
         <div class="col-lg-4 mb-5 mb-lg-0">
@@ -39,14 +36,16 @@
           </a>
           <br />
           <br />
-          <p class="phoneNumber">Phone Number : {{about_me.phone_number}}</p>
+          {% if about_me.phone_number %}
+            <p class="phoneNumber">Phone Number : {{about_me.phone_number}}</p>
+          {% endif %}
         </div>
 
         <!-- Footer About Text -->
         <div class="col-lg-4">
           <h4 class="text-uppercase mb-4">
             Omar Baleid (MasterBDX)</h4>
-            {% if about_me %}
+            {% if about_me.overview %}
           <p class="lead mb-0 overview">
             {{about_me.overview}}
           </p>
