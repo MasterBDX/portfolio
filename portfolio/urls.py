@@ -5,6 +5,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('imagefit/', include('imagefit.urls')),
     path('', include('main.urls', namespace= 'main'))
 ]
 

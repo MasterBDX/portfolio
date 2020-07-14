@@ -13,7 +13,7 @@
             <img src="{{location.country.flag}}" />
             </span>
             <br>
-            {% if about_me.province %}
+            {% if info.province %}
             Province &nbsp;:&nbsp; {{location.province}}
             <br>
             {% endif %}
@@ -29,36 +29,49 @@
 
         <!-- Footer Social Icons -->
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Online</h4>
-          <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/master.bdx.35?ref=bookmarks">
-            <i class="fab fa-fw fa-facebook-f"></i>
-          </a>
-          <a class="btn btn-outline-light btn-social mx-1" 
-             href="https://twitter.com/masterbdx">
-            <i class="fab fa-fw fa-twitter"></i>
-          </a>
-          <a class="btn btn-outline-light btn-social mx-1" 
-             href="https://www.linkedin.com/in/master-bdx-365201197/">
-            <i class="fab fa-fw fa-linkedin-in"></i>
-          </a>
-          <a class="btn btn-outline-light btn-social mx-1"
-             href="https://github.com/MasterBDX">
-            <i class="fab fa-fw fa-github"></i>
-          </a>
-          <br />
-          <br />
-          {% if about_me.phone_number %}
-            <p class="phoneNumber">Phone Number : {{about_me.phone_number}}</p>
-          {% endif %}
-        </div>
+          {% if info %}
+            <h4 class="text-uppercase mb-4">Online</h4>
+            {% if info.facebook %}
+            <a class="btn btn-outline-light btn-social mx-1" 
+              href="{{info.facebook}}">
+              <i class="fab fa-fw fa-facebook-f"></i>
+            </a>
+            {% endif %}
+            {% if info.twitter %}
+            <a class="btn btn-outline-light btn-social mx-1" 
+              href="{{info.twitter}}">
+              <i class="fab fa-fw fa-twitter"></i>
+            </a>
+            {% endif %}
 
+            {% if info.linkedin %}
+            <a class="btn btn-outline-light btn-social mx-1" 
+              href="{{info.linkedin}}">
+              <i class="fab fa-fw fa-linkedin-in"></i>
+            </a>
+            {% endif %}
+            
+            {% if info.github %}
+              <a class="btn btn-outline-light btn-social mx-1"
+                href="{{info.github}}">
+                <i class="fab fa-fw fa-github"></i>
+              </a>
+            {% endif %}
+            <br />
+            <br />
+            {% if info.phone_number %}
+              <p class="phoneNumber">
+                Phone Number : {{info.phone_number}}</p>
+            {% endif %}
+            {% endif %}
+          </div>
         <!-- Footer About Text -->
         <div class="col-lg-4">
           <h4 class="text-uppercase mb-4">
             Omar Baleid (MasterBDX)</h4>
-            {% if about_me.overview %}
+            {% if info.overview %}
           <p class="lead mb-0 overview">
-            {{about_me.overview}}
+            {{info.overview}}
           </p>
            {% endif %}
         </div>
