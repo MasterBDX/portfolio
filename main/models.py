@@ -39,7 +39,6 @@ class Skill(models.Model):
         return self.title
 
 
-
 class Info(models.Model):
     facebook = models.URLField(max_length=255, null=True, blank=True)
     twitter = models.URLField(max_length=255, null=True, blank=True)
