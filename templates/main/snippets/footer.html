@@ -23,6 +23,18 @@
             {% endif %}
             City &nbsp;:&nbsp; {{location.city}}
             <br>
+            {% if location.street %}
+            Street &nbsp;:&nbsp; {{location.street}}
+            <br>
+            {% endif %}
+            {% if location.house_num %}
+            House Number &nbsp;:&nbsp; {{location.house_num}}
+            <br>
+            {% endif %}
+            {% if location.zip_code %}
+            Zip Code &nbsp;:&nbsp; {{location.zip_code}}
+            <br>
+            {% endif %}
           </p>
           {% endif %}
         </div>

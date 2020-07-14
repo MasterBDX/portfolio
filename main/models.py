@@ -66,5 +66,14 @@ class Location(models.Model):
     township = models.CharField(max_length=255,null=True,
                                             blank=True)
 
+    street = models.CharField(max_length=255,null=True,
+                                            blank=True)
+
+    house_num = models.CharField(max_length=255,null=True,
+                                            blank=True)
+                                            
+    zip_code = models.CharField(max_length=255,null=True,
+                                            blank=True)
+
     def __str__(self):
         return self.country.name
