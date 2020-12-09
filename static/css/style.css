@@ -2,6 +2,13 @@
 	background-color:green;
 } */
 
+
+/* Modal Section  */
+.portfolio-modal-title{
+	line-height: 50px;
+}
+
+/* Skills Section  */
 .skill-container{
 	background-color: #2c3e50;
 	padding: 80px;
@@ -71,3 +78,13 @@
 .phoneNumber{
 	font-size: 1.275em;
 }
+
+
+/* Media Query */
+@media only screen and (max-width: 750px) {
+	.content-modal .text-content{
+
+		font-size: 1.2em !important;
+	}
+  }
+  

@@ -43,9 +43,9 @@
                 <div class="modal-body ">
                   <div class="container">
                     <div class="row justify-content-center">
-                      <div class="col-lg-8">
+                      <div class="col-lg-8 content-modal">
                         <!-- Portfolio Modal - Title -->
-                        <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">{{project.title}}</h2>
+                        <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0 text-center">{{project.title}}</h2>
                         <!-- Icon Divider -->
                         <div class="divider-custom">
                           <div class="divider-custom-line"></div>
@@ -57,21 +57,21 @@
                         <!-- Portfolio Modal - Image -->
                         <img class="img-fluid rounded mb-5" src="{{project.img.url}}" alt="">
                         <!-- Portfolio Modal - Text -->
-                        <p class="mb-5" style="font-size: 1.5em;">
+                        <p class="mb-5 text-content" style="font-size: 1.5em;">
                             {{project.description|safe}}
                         </p>
-                        <button class="btn btn-primary mr-1" href="#" data-dismiss="modal">
+                        <button class="btn btn-primary mr-1 mt-2 mb-2" href="#" data-dismiss="modal">
                           <i class="fas fa-times fa-fw"></i>
                           Close
                         </button>
                         {% if project.github %}
-                            <a class="btn btn-dark mr-1" href="{{project.github}}">
+                            <a class="btn btn-dark mr-1 mt-2 mb-2" href="{{project.github}}">
                               <i class="fab fa-github fa-fw"></i>
                               Github
                             </a>
                         {% endif %}
                         {% if project.live %}
-                            <a type="" class="btn btn-danger mr-1" href="{{project.live}}">
+                            <a type="" class="btn btn-danger mr-1 mb-2 mt-2" href="{{project.live}}">
                               <i class="far fa-window-maximize fa-fw"></i>
                               Live Preview
                             </a>
