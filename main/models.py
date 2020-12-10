@@ -16,7 +16,7 @@ class Project(models.Model):
     order = models.PositiveSmallIntegerField(default=0)
 
     class Meta:
-        ordering = ['order']
+        ordering = ['-order']
 
     def __str__(self):
         return self.title
