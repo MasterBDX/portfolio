@@ -19,14 +19,14 @@
       <div class="row">
 
         {% for project in projects %}
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 project-container">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal{{project.id}}">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" 
+            <img class="img-fluid project-img" 
             src="{{project.img.url}}" alt="">
           </div>
         </div>

@@ -80,6 +80,12 @@
 }
 
 
+/* Porject Styles */
+.project-container .project-img{
+	height: 300px;
+	width: 100%;
+}
+
 /* Media Query */
 @media only screen and (max-width: 750px) {
 	.content-modal .text-content{
