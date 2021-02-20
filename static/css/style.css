@@ -86,7 +86,10 @@
 	width: 100%;
 	text-align: center;
 }
-
+.project-container .img-container .project-img
+{
+	height: 100%;
+}
 /* Media Query */
 @media only screen and (max-width: 750px) {
 	.content-modal .text-content{
