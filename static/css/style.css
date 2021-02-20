@@ -90,6 +90,13 @@
 {
 	height: 100%;
 }
+
+.portfolio-modal button,
+.portfolio-modal a
+{
+    font-weight: bold;
+}
+
 /* Media Query */
 @media only screen and (max-width: 750px) {
 	.content-modal .text-content{
