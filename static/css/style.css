@@ -81,9 +81,10 @@
 
 
 /* Porject Styles */
-.project-container .project-img{
-	height: 300px;
+.project-container .img-container{
+	height: 260px;
 	width: 100%;
+	text-align: center;
 }
 
 /* Media Query */
