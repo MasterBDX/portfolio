@@ -11,7 +11,7 @@ django-storages==1.8
 dropbox==9.4.0
 gunicorn==20.0.0
 idna==2.8
-Pillow==8.0.1
+Pillow==9.0.1
 psycopg2==2.8.4
 pytz==2019.3
 requests==2.22.0
